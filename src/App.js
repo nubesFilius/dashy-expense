@@ -37,9 +37,13 @@ function App() {
 
   return (
     <div>
-      <Banner />
-      <NewExpense onAddNewExpense={addNewExpense} />
-      <Expenses items={expenses} />
+      <div>
+        <Banner />
+      </div>
+      <div>
+        <NewExpense onAddNewExpense={addNewExpense} />
+        <Expenses items={expenses} />
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
-import Container from './components/UI/Container';
+import NewExpenseModalContainer from './components/UI/NewExpenseModalContainer';
 import Banner from './components/DashyBanner/Banner';
 
 const DUMMY_DATA = [
@@ -46,7 +46,7 @@ function App() {
     <div>
       <Banner />
       <div>
-        <Container  />
+        <NewExpenseModalContainer />
       </div>
     </div>
   );

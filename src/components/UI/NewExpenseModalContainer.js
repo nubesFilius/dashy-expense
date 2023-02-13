@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NewExpenseModal from '../NewExpenseModal/NewExpenseModal';
-import TriggerButton from '../NewExpenseModalButton/NewExpenseModalButton';
+import NewExpenseModalButton from '../NewExpenseModalButton/NewExpenseModalButton';
 
 export class Container extends Component {
   state = { isShown: false };
@@ -31,7 +31,7 @@ export class Container extends Component {
   render() {
     return (
       <React.Fragment>
-        <TriggerButton
+        <NewExpenseModalButton
           showModal={this.showModal}
           buttonRef={(n) => (this.TriggerButton = n)}
         />

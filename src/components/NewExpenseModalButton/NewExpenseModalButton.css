@@ -1,0 +1,9 @@
+.new-expense-modal-button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  background-color: #355ff8;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
+import Container from './components/UI/Container';
 import Banner from './components/DashyBanner/Banner';
 
 const DUMMY_DATA = [
@@ -35,14 +36,17 @@ function App() {
     });
   }
 
+  function onSubmit(event) {
+    event.preventDefault(event);
+    console.log(event.target.name.value);
+    console.log(event.target.email.value);
+  }
+
   return (
     <div>
+      <Banner />
       <div>
-        <Banner />
-      </div>
-      <div>
-        <NewExpense onAddNewExpense={addNewExpense} />
-        <Expenses items={expenses} />
+        <Container  />
       </div>
     </div>
   );

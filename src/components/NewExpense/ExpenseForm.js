@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
-  const [enteredDate, setEnteredDate] = useState('');
 
   function titleChangeHandler(event) {
     setEnteredTitle(event.target.value);
@@ -12,10 +11,6 @@ function ExpenseForm(props) {
 
   function amountChangeHandler(event) {
     setEnteredAmount(event.target.value);
-  }
-
-  function dateChangeHandler(event) {
-    setEnteredDate(event.target.value);
   }
 
   function submitHandler(event) {
@@ -26,7 +21,6 @@ function ExpenseForm(props) {
     const expenseData = {
       title: enteredTitle,
       amount: +enteredAmount,
-      date: new Date(enteredDate),
     };
 
     props.onFormSubmit(expenseData);
@@ -34,7 +28,6 @@ function ExpenseForm(props) {
     // This is to clear the input of the form after hitting submit
     setEnteredTitle('');
     setEnteredAmount('');
-    setEnteredDate('');
   }
 
   return (
@@ -52,20 +45,10 @@ function ExpenseForm(props) {
           <label>Amount</label>
           <input
             type="number"
-            min="0.01"
-            step="0.01"
+            min="0.00"
+            step="1"
             value={enteredAmount}
             onChange={amountChangeHandler}
-          />
-        </div>
-        <div className="new-expense__control">
-          <label>Date</label>
-          <input
-            type="date"
-            min="2021-01-01"
-            max="2022-12-31"
-            value={enteredDate}
-            onChange={dateChangeHandler}
           />
         </div>
       </div>

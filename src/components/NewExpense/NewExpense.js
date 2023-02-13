@@ -11,7 +11,7 @@ function NewExpense(props) {
   }
 
   return (
-    <div className="new-expense ">
+    <div className="new-expense">
       <ExpenseForm onFormSubmit={addNewExpenseData}></ExpenseForm>
     </div>
   );

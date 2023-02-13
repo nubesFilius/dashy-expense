@@ -4,6 +4,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 import NewExpenseModalContainer from './components/UI/NewExpenseModalContainer';
 import Banner from './components/DashyBanner/Banner';
+import MaterialUICard from './components/UI/MaterialUICard/MaterialUICard';
 
 const DUMMY_DATA = [
   {
@@ -47,6 +48,7 @@ function App() {
       <Banner />
       <div>
         <NewExpenseModalContainer />
+        <MaterialUICard />
       </div>
     </div>
   );

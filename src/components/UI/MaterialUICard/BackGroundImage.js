@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import add_expense from './add_expense.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
     },
     backgroundColor: '#f7f7f7', // Add a background color to the container element
   },
+  wrapper: {
+    display: 'inline-block',
+    margin: theme.spacing(2),
+    verticalAlign: 'top',
+  },
   image: {
     maxHeight: '100%',
     maxWidth: '100%',
@@ -41,14 +45,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BackgroundImage = () => {
+const BackgroundImage = (props) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <h2 className={classes.title}>Add Expense</h2>
-      <p className={classes.paragraph}>Add a new expense for your account</p>
-      <img className={classes.image} src={add_expense} alt="add_expense" />
+    <div className={classes.wrapper}>
+      <div className={classes.root}>
+        <h2 className={classes.title}>{props.title}</h2>
+        <p className={classes.paragraph}>{props.paragraph}</p>
+        <img
+          className={classes.image}
+          src={props.imageUrl}
+          alt={props.imageAlt}
+        />
+      </div>
     </div>
   );
 };

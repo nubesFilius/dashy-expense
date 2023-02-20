@@ -5,6 +5,7 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpenseModalContainer from './components/UI/NewExpenseModalContainer';
 import Banner from './components/DashyBanner/Banner';
 import BackgroundImage from './components/UI/MaterialUICard/BackGroundImage';
+import ListOfBackGroundImages from './components/UI/MaterialUICard/ListOfBackGroundImages';
 
 const DUMMY_DATA = [
   {
@@ -46,7 +47,7 @@ function App() {
   return (
     <div>
       <Banner />
-      <BackgroundImage />
+      <ListOfBackGroundImages />
     </div>
   );
 }

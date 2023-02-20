@@ -12,16 +12,15 @@ function MaterialUICard() {
         <CardMedia
           component="img"
           height="140"
-          image="~/Desktop/AddExpenseButton"
-          alt="green iguana"
+          image="../../../../assets/add_expense.png"
+          alt="add expense"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            Add Expenses
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            You can add expenses, which will be added to your dashboard
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -46,10 +46,6 @@ function App() {
   return (
     <div>
       <Banner />
-      <div>
-        <NewExpenseModalContainer />
-        <MaterialUICard />
-      </div>
     </div>
   );
 }
